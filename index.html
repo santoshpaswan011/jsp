@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+  <style>
+    body{
+      background-color: bisque;
+    }
+    h1{
+      color: red;
+    }
+  </style>
+  <h1>Task Of Javascript</h1>
+    <script>
+      
+      // question 1
+        function NegativeNumbers(arr) {
+  return arr.filter(num => num >= 0);
+}
+const numbers = [5, -3, 0, 9, -1, 7];
+const positiveNumbers = NegativeNumbers(numbers);
+document.writeln("<br>1.)",positiveNumbers); 
+
+
+// question 2
+
+function difference(num) {
+  if (num > 13) {
+    return 2 * Math.abs(num - 13);
+  } else {
+    return 13 - num;
+  }
+}
+
+document.writeln("<br>2.)",difference(10));  
+document.writeln("<br>2.)",difference(20));
+
+// question 3
+function fibonacciSeries(n) {
+  const series = [];
+  let a = 0, b = 1;
+
+  for (let i = 0; i < n; i++) {
+    series.push(a);
+    [a, b] = [b, a + b]; 
+  }
+
+  return series;
+}
+
+
+document.writeln("<br>3.)",fibonacciSeries(10));
+
+
+
+// question 4
+function sumMultiplesOf3And5(limit) {
+    let sum = 0;
+    for (let i = 0; i < limit; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+      }
+    }
+    return sum;
+  }
+  
+
+  const result = sumMultiplesOf3And5(1000);
+  document.writeln("<br> 4.)Sum of multiples of 3 and 5 under 1000 is:", result);
+  
+
+// question 5
+
+const cube = new Function("num", "return num * num * num;");
+
+document.writeln("<br>5.)",cube(2));  
+document.writeln("<br>5.)",cube(3));  
+document.writeln("<br>5.)",cube(5));  
+
+
+       
+    </script>
+</body>
+</html>
